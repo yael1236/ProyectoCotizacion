@@ -854,7 +854,7 @@ $cs2 = $conConTabla -> query("SELECT * FROM cotizacion ORDER BY id DESC LIMIT 1 
                 doc.text(20,122,'órdenes:');
                 doc.text(20,142,'Atentamente');
                 /*Insertar el sell*/
-                doc.addImage(imgse,'JPG',75,145,65,54);    
+                doc.addImage(imgse,'JPG',75,143,65,54);    
                 doc.text(70,210,'DRA. C. FABIOLA POLO MELGAREJO');
                 doc.text(60,217,'DIRECCIÓN DE RESPONSABILIDAD SOCIAL Y ');
                 doc.text(90,224,'SUSTENTABILIDAD ');
