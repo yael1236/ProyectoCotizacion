@@ -7,8 +7,8 @@ header("Content-Type: text/html; Charset=UTF-8");
 $Nombre = isset($_POST['Nombre']) ? $_POST['Nombre'] : '';
 $Apellido = isset($_POST['Apellido']) ? $_POST['Apellido'] : '';
 $Email = isset($_POST['Email']) ? $_POST['Email'] : '';
-$password = isset($_POST['password']) ? $_POST['password'] : '';
-$password1 = isset($_POST['password1']) ? $_POST['password1'] : '';
+$password = md5( isset($_POST['password']) ? $_POST['password'] : '');
+$password1 =md5( isset($_POST['password1']) ? $_POST['password1'] : '');
 // Conexion a Data
 $con = new SQLite3("../data/cotCORSEC.db") or die("Problemas para conectar");
 

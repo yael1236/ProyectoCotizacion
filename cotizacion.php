@@ -98,7 +98,7 @@
                                   <option value="Transporte de carga ">Transporte de carga </option>
                                   <option value="Financiero bancarizado">Financiero bancarizado</option>
                                   <option value="Financiero no bancarizado">Financiero no bancarizado</option>
-                                  <option value="Logistica">Logistica</option>
+                                  <option value="Logistica">Logística</option>
                               </select>
                           </div>
                         </div>
@@ -246,7 +246,7 @@ echo '
 														  <th class="text-center" scope="col">#</th>
 														  <th scope="col">Responsable</th>
 														  <th scope="col">Empresa</th>
-														  <th scope="col">PYME</th>
+														  <th scope="col">Tamaño de la Empresa</th>
                               <th scope="col"></th>
 															</tr>
 													<tbody>	
@@ -277,7 +277,7 @@ $cs2 = $conConTabla -> query("SELECT * FROM cotizacion ORDER BY id DESC LIMIT 1 
     echo '	
     <tr class="align-middle" style="font-size: .8em;">										
 															<tr>
-																<td scope="row" style="text-align: center;" name="idel" id="idel">'.$id.'</td>
+																<td scope="row" style="text-align: center;" name="idel" id="idel"></td>
 																<td class="border-3">'.$Responsable.' </td>
 															    <td class="border-3">'.$nomEmp.'</td>
 															    <td class="border-3">'.$PyME.' </td>
@@ -374,12 +374,12 @@ $cs2 = $conConTabla -> query("SELECT * FROM cotizacion ORDER BY id DESC LIMIT 1 
                 doc.setFontSize(16);
                 /*declarar el color de la letra*/
                 doc.setTextColor(255,255,255);
-                doc.text(10,124,'PROPUESTA TÉCNICO – ECONÓMICA');
+                doc.text(10,124,'PROPUESTA TÉCNICO - ECONÓMICA');
                 doc.text(10,140,'LA GESTIÓN Y OBTENCIÓN DEL DISTINTIVO ');
                 doc.text(10,147,'COMO EMPRESA SOCIALMENTE ');
-                doc.text(10,154,'RESPONSABLE 2024 EN LA CATEGORÍA DE');
+                doc.text(10,154,'RESPONSABLE 2024.');
                 /*Agregar la pyme por la bd*/
-                doc.text(10,161,(("PyME/  ")+(PyME)));
+                
                 /*2 pagina pdf*/
                 doc.addPage();
                 doc.setTextColor(0,0,0);
@@ -771,7 +771,7 @@ $cs2 = $conConTabla -> query("SELECT * FROM cotizacion ORDER BY id DESC LIMIT 1 
                 doc.text(35,119,'plataforma. ');
     
                 doc.text(25,139,'2.	La presente propuesta no incluye el pago al Centro Mexicano para la Filantropía (CEMEFI),');
-                doc.text(35,146,(('el cual es un monto de ')+(textNum)+(' CANTIDAD EN LETRA 00/100 M/N). ')));
+                doc.text(35,146,(('el cual es un monto de ')+(textNum)+('. ')));
                 
                 doc.setFontType("bold");
                 doc.text(50,182,'GARANTIZAMOS NUESTROS SERVICIOS EN EL PROCESO DE');

@@ -1,8 +1,8 @@
 <?php
 
     session_start();
-
-    if(isset($_SESSION['$Email'])){
+    
+        if(isset($_SESSION['$Email'])){
         header("location: app/php/registro.php");
     }
 
@@ -36,7 +36,7 @@
                         <h2 class="fw-light h5 mb-4 text-center" style="font-size: 1.1em;">Sistema de Cotizaciones.</h2>
                         <form action="app/php/login.php" method="POST">
                             <input type="email" class="form-control form-control-user mb-3" placeholder="Correo Electrónico" name="Email">
-                            <input type="password" class="form-control form-control-user mb-3" placeholder="Contraseña" name="password" >
+                            <input type="password"  class="form-control form-control-user mb-3" placeholder="Contraseña" name="password" >
 
                             <div class="form-group" v-html="datos">
                             </div>
