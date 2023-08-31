@@ -6,8 +6,8 @@ session_start();
 $con = new SQLite3("../data/cotCORSEC.db") or die("Problemas para conectar");
 
 
-$Email = $_POST['Email'];
-$password = $_POST['password'];
+$Email = md5($_POST['Email']);
+$password = md5($_POST['password']);
 
 $query = "SELECT * FROM registro WHERE Email = '$Email' AND password = '$password'";
 $result = $con->query($query);
